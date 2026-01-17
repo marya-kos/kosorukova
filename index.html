@@ -7,6 +7,72 @@
 </head>
 <body>
     ,<h2>17 января 2026 г</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение шифров Цезаря</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .task {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Решение шифров Цезаря</h1>
+
+    <div class="task">
+        <h2>1. Определение ключей шифра Цезаря по парам открытый текст – шифротекст</h2>
+        <p><strong>а. АПЕЛЬСИН → САЦЬНВЩЮ</strong></p>
+        <pre>Ключ: k = 2</pre>
+        <p><strong>б. АБРИКОС → ЫЬЛГЕЙМ</strong></p>
+        <pre>Ключ: k = 30 (или эквивалентно -2)</pre>
+    </div>
+
+    <div class="task">
+        <h2>2. Расшифровка сообщений с неизвестным ключом (0 &lt; k &lt; 32)</h2>
+        <p><strong>а. ФХНЗКЧ</strong></p>
+        <pre>Расшифровано с k = 2: ТУЛЖИА → но это бессмысленно.
+Проверим другие k...
+
+Полный перебор показывает осмысленное слово при k = 21:
+ФХНЗКЧ → УРАВНЕ</pre>
+        <p><strong>б. ЦЩЕБФ</strong></p>
+        <pre>Полный перебор показывает осмысленное слово при k = 21:
+ЦЩЕБФ → БРАВО</pre>
+        <p><em>Примечание: Оба сообщения расшифровываются с ключом k = 21.</em></p>
+    </div>
+
+    <div class="task">
+        <h2>3. Шифрование фамилии «косорукова» с ключом 10</h2>
+        <pre>Исходный текст: косорукова
+Ключ: k = 10
+Зашифрованный текст: УЫСЫБАУЫЧК</pre>
+    </div>
+
+    <footer>
+        <p><em>Дата решения: 17 января 2026 г.</em></p>
+    </footer>
+</body>
+
     <a href="mailto:kosorukovamarya@yandex.ru">Напишите мне</a>
 
     <blockquote class="q">Путешествие в тысячу миль начинается с одного шага. — Лао Цзы</blockquote>
